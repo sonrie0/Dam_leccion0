@@ -15,6 +15,7 @@ namespace Dam_leccion_SPL
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif

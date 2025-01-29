@@ -4,9 +4,12 @@
     {
         int count = 0;
 
+        public object TextNombre { get; private set; }
+
         public MainPage()
         {
             InitializeComponent();
+            Ejecutar();
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -19,6 +22,15 @@
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
+        }
+        public void Ejecutar()
+        {
+            TextNombre.Text = "Hola Soy yooo";
+        }
+
+        private void btAceptar_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Asistente del sistema", "SE HA GUARDADO EL REGISTRO EN LA BD", "Acepta");
         }
     }
 
