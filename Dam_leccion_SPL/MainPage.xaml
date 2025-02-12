@@ -34,19 +34,19 @@
 
              <Entry
                  x:Name="txtNombre"
-                 Text="{Binding Nombre}"
+                 Text="{Binding personasModel.Nombre}"
                  HorizontalOptions="FillAndExpand"
                  Placeholder="Escribe un nombre"/>
             
             <Entry
                  x:Name="txtApellido"
-                 Text="{Binding Apellidp}"
+                 Text="{Binding personasModel.Apellido}"
                  HorizontalOptions="FillAndExpand"
                  Placeholder="Escribe tu apellido"/>
             
             <Entry
                  x:Name="txtEdad"
-                 Text="{Binding Edad}"
+                 Text="{Binding personasModel.Edad}"
                  HorizontalOptions="FillAndExpand"
                  Placeholder="Escribe un Edad"/>
 

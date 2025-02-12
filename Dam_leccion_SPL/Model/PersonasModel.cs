@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Dam_leccion_SPL.Model
 {
-    internal class PersonaModel
+    public class PersonasModel
     {
         //Atributos 
         private string? nombre;

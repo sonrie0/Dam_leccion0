@@ -1,17 +1,19 @@
 ﻿using Dam_leccion_SPL.Model;
+using Dam_leccion_SPL.Viewmodel;
 
 namespace Dam_leccion_SPL
 {
     public partial class MainPage : ContentPage
     {
         int count = 0;
-        //Aqui se declara global, en este caso na propiedad del perona model 
-        private PersonaModel personaModel { get; set; }
+        
+        MainPageViewModel mainPageViewModel = new MainPageViewModel();
 
         public MainPage()
         {
             InitializeComponent();
-            Ejecutar();
+            BindingContext = mainPageViewModel;
+            
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -25,37 +27,17 @@ namespace Dam_leccion_SPL
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
-        public void Ejecutar()
-        {
-            // PersonaModel personaModel = new PersonaModel();
-            // personaModel.Nombre = "Holi"; 
-            // txtNombre.Text= personaModel.Nombre;
-
-            personaModel = new PersonaModel
-            {
-                Nombre = "Hola soy yoo",
-                Apellido = "Perez",
-                Edad= "19"
-
-
-            };
-
-            BindingContext = personaModel;
-
-            //txtNombre.Text = personaModel.Nombre(); 
-            
-            //Binding personabinding = new Binding(); 
-
-            //PersonaBinding.Sourse = personaModel;  // origen 
-            //PersonaBinding.Path = "Nombre"; //RUta 
-            //txtNombre.SetBindig(Entry.TexrProperty, personaBinding);//Destinofinal
-
-        }
+        
 
 
         private void btAceptar_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Asistente del sistema", "SE HA GUARDADO EL REGISTRO EN LA BD", "Acepta");
+            //DisplayAlert("Asistente del sistema", "SE HA GUARDADO EL REGISTRO EN LA BD", "Acepta");
+            //personasModel.Nombre = "Sara";
+            //personasModel.Apellido = "Desain xd";
+            //personasModel.Edad = "19";
+
+
         }
     }
 
